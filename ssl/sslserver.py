@@ -36,4 +36,16 @@ def deal_with_client(connstream):
         t2=time.clock()
         t_recv+=t2-t1
         print("receive time:",t2-t1)
+    
     print('avg send time:',t_send)
+    #finished with client
+    
+    while True:
+        newsocket, fromaddr = bindsocket.accept()
+        connstream = context.wrap_socket(newsocket, server_side = True)
+        try:
+            deal_with_client(connstream)
+        finally:
+            connstream.shutdown(socket,SHUT_RDWR)
+            constream.close()
+
