@@ -1,0 +1,558 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 547/547   #P:48
+#
+#                              _-----=> irqs-off
+#                             / _----=> need-resched
+#                            | / _---=> hardirq/softirq
+#                            || / _--=> preempt-depth
+#                            ||| /     delay
+#           TASK-PID   CPU#  ||||    TIMESTAMP  FUNCTION
+#              | |       |   ||||       |         |
+           <...>-61620 [001] d...   835.069601: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.069605: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   835.079650: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   835.079652: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.092587: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.105583: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.118576: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.131569: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.131571: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNs.   835.139565: sched_wakeup: comm=kworker/1:0 pid=303 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   835.139567: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=kworker/1:0 next_pid=303 next_prio=120
+     kworker/1:0-303   [001] d...   835.139569: sched_switch: prev_comm=kworker/1:0 prev_pid=303 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   835.141616: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   835.141617: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.154558: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.167554: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.180545: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.193539: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.193541: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   835.203587: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   835.203588: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.216528: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.229521: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.242514: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.255508: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.255510: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   835.265555: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   835.265556: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.278499: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.291492: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.304484: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.317479: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.317481: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   835.327526: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   835.327528: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.340467: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.353461: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.366454: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.379449: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.379450: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   835.389496: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   835.389497: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.402436: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.415432: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.428424: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.441417: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.441419: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   835.451464: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   835.451465: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.464405: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.477401: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.490393: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.503388: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.503390: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   835.513435: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   835.513436: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.526377: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.539371: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.552363: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.565356: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.565358: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   835.575404: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   835.575404: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.588346: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.601340: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.614333: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.627326: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.627328: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   835.637373: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   835.637374: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.650316: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.663309: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.676304: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.689296: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.689298: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   835.699343: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   835.699344: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.712285: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.725279: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.738271: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.751265: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.751267: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   835.761312: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   835.761313: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.774254: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.787249: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.800243: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.813237: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.813239: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   835.823284: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   835.823285: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.836228: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.849218: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.862210: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.875206: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.875208: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   835.885253: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   835.885255: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.898194: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.911188: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.924181: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.937176: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.937178: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   835.947223: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   835.947224: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.960163: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.973157: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.986150: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   835.999145: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   835.999147: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   836.009193: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   836.009193: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.022133: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.035128: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.048120: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.061114: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.061115: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   836.071161: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   836.071161: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.084104: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.097097: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.110090: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.123084: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.123086: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   836.133131: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   836.133132: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] dNs.   836.139077: sched_wakeup: comm=kworker/1:0 pid=303 prio=120 success=1 target_cpu=001
+           <...>-62518 [001] d...   836.139078: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=kworker/1:0 next_pid=303 next_prio=120
+     kworker/1:0-303   [001] d...   836.139080: sched_switch: prev_comm=kworker/1:0 prev_pid=303 prev_prio=120 prev_state=S ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.152069: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.165066: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.178057: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.191052: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.191054: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   836.201099: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   836.201101: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.214039: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.227034: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.240025: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.253019: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.253022: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   836.263067: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   836.263068: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.276009: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.289004: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.301996: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.314989: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.314990: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   836.325036: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   836.325037: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.337979: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.350973: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.363965: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.376960: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.376962: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   836.387007: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   836.387008: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.399948: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.412943: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.425937: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.438930: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.438932: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   836.448977: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   836.448978: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.461919: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.474913: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.487905: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.500899: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.500901: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   836.510946: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   836.510947: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.523887: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.536882: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.549874: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.562869: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.562871: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   836.572916: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   836.572917: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.585857: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.598852: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.611843: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.624838: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.624840: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   836.634885: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   836.634886: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.647827: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.660821: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.673814: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.686809: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.686811: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   836.696856: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   836.696856: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.709796: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.722791: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.735782: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.748776: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.748778: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   836.758823: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   836.758824: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.771766: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.784759: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.797753: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.810746: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.810748: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   836.820794: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   836.820794: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.833735: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.846730: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.859726: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.872717: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.872719: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   836.882764: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   836.882766: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.895705: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.908700: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.921692: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.934687: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.934689: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   836.944734: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   836.944735: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.957675: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.970670: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.983662: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   836.996656: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   836.996658: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   837.006703: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   837.006704: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.018891: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.031638: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.044633: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.057626: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.057627: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   837.067673: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   837.067673: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.080614: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.093609: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.106605: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.119595: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.119596: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   837.129642: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   837.129642: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] dNs.   837.138586: sched_wakeup: comm=kworker/1:0 pid=303 prio=120 success=1 target_cpu=001
+           <...>-62518 [001] d...   837.138587: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=kworker/1:0 next_pid=303 next_prio=120
+     kworker/1:0-303   [001] d...   837.138589: sched_switch: prev_comm=kworker/1:0 prev_pid=303 prev_prio=120 prev_state=S ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.151581: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.164573: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.177569: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.190561: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.190562: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   837.200608: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   837.200608: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.213549: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.226544: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.239537: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.252531: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.252532: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   837.262578: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   837.262578: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.275518: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.288514: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.301506: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.314499: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.314502: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   837.324548: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   837.324549: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.337489: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.350483: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.363476: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.376470: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.376472: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   837.386518: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   837.386518: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.399457: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.412453: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.425446: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.438440: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.438442: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   837.448488: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   837.448490: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.461430: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.474423: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.487417: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.500411: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.500413: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   837.510458: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   837.510459: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.523397: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.536392: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.549385: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.562380: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.562381: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   837.572427: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   837.572427: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.585367: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.598362: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.611355: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.624349: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.624351: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   837.634396: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   837.634397: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.647336: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.660331: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.673324: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.686319: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.686321: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   837.696366: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   837.696367: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.709308: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.722302: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.735296: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.748287: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.748290: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   837.758336: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   837.758336: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.771275: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.784271: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.797264: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.810257: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.810260: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   837.820305: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   837.820306: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.833246: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.846241: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.859233: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.872228: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.872229: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   837.882275: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   837.882275: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.895215: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.908210: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.921203: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.934198: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.934199: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   837.944245: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   837.944245: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.957185: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.970180: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.983174: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   837.996167: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   837.996169: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   838.006214: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   838.006215: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.018413: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.031148: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.044143: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.057136: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.057138: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   838.067184: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   838.067184: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.080126: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.093120: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.106113: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.119106: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.119107: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   838.129153: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   838.129153: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] dNs.   838.138096: sched_wakeup: comm=kworker/1:0 pid=303 prio=120 success=1 target_cpu=001
+           <...>-62518 [001] d...   838.138097: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=kworker/1:0 next_pid=303 next_prio=120
+     kworker/1:0-303   [001] d...   838.138099: sched_switch: prev_comm=kworker/1:0 prev_pid=303 prev_prio=120 prev_state=S ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.151091: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.164084: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.177079: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.190071: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.190072: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   838.200118: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   838.200118: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.213061: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.226055: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.239047: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.252041: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.252042: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   838.262088: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   838.262088: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.275029: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.288023: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.301017: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.314010: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.314012: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   838.324058: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   838.324058: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.336999: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.349994: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.362987: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.375982: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.375983: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   838.386029: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   838.386029: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.398969: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.411963: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] dNh.   838.421952: sched_wakeup: comm=watchdog/1 pid=300 prio=0 success=1 target_cpu=001
+           <...>-62518 [001] d...   838.421954: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=watchdog/1 next_pid=300 next_prio=0
+      watchdog/1-300   [001] d...   838.421966: sched_switch: prev_comm=watchdog/1 prev_pid=300 prev_prio=0 prev_state=S ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.434952: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.447945: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.447947: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   838.457992: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   838.457993: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.470935: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.483928: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.496921: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.509914: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.509916: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   838.519962: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   838.519962: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.532902: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.545898: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.558890: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.571885: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.571887: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   838.581932: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   838.581933: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.594873: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.607867: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.620860: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.633855: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.633857: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   838.643902: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   838.643903: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.656843: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.669837: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.682830: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.695823: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.695825: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   838.705870: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   838.705872: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.718813: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.731807: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.744801: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.757795: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.757796: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   838.767842: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   838.767842: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.780781: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.793776: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.806769: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.819764: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.819766: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   838.829811: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   838.829812: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.842751: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.855746: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.868742: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.881734: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.881736: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   838.891781: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   838.891782: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.904723: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.917716: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.930708: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.943703: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.943705: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   838.953750: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   838.953751: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.966691: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   838.979686: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   838.992679: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.005673: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.005675: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   839.015721: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   839.015721: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.028662: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.041655: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.054647: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.067642: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.067644: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   839.077689: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   839.077690: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.090630: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.103625: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.116617: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.129612: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.129613: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNs.   839.137607: sched_wakeup: comm=kworker/1:0 pid=303 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   839.137608: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=kworker/1:0 next_pid=303 next_prio=120
+     kworker/1:0-303   [001] d...   839.137609: sched_switch: prev_comm=kworker/1:0 prev_pid=303 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   839.139659: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   839.139660: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.152601: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.165594: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.178587: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.191581: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.191583: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   839.201628: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   839.201630: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.214569: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.227564: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.240558: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.253552: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.253553: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   839.263599: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   839.263599: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.276541: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.289534: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.302526: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.315521: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.315522: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   839.325568: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   839.325569: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.338509: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.351503: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.364496: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.377491: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.377492: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   839.387538: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   839.387538: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.400478: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.413473: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.426464: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.439460: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.439461: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   839.449507: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   839.449507: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.462448: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.475443: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.488435: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.501430: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.501431: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   839.511477: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   839.511477: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.524418: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.537412: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.550404: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.563399: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.563401: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   839.573446: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   839.573447: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.586387: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.599382: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.612374: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.625369: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.625371: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   839.635416: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   839.635417: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.648357: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.661350: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.674348: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.687338: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.687340: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   839.697385: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   839.697386: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.710328: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.723321: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.736314: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=R ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] d...   839.749309: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
+           <...>-62518 [001] d...   839.749311: sched_switch: prev_comm=gettimeofday_sl prev_pid=62518 prev_prio=120 prev_state=S ==> next_comm=while_a next_pid=61620 next_prio=120
+           <...>-61620 [001] dNh.   839.759356: sched_wakeup: comm=gettimeofday_sl pid=62518 prio=120 success=1 target_cpu=001
+           <...>-61620 [001] d...   839.759358: sched_switch: prev_comm=while_a prev_pid=61620 prev_prio=120 prev_state=R ==> next_comm=gettimeofday_sl next_pid=62518 next_prio=120
